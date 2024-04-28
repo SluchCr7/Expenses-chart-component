@@ -68,7 +68,7 @@ html{
         font-size: 1.5rem;
     }
     .chart_container{
-        @include flex(row, 15px, end);
+        @include flex(row, 5px, end);
         margin: 50px 0 20px; 
         justify-content: center;
         width: 100%;
