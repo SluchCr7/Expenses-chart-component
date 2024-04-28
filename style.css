@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--Cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+html {
+  font-size: 18px;
+}
+
+.top_chart {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0;
+  width: 500px;
+  padding: 1.8rem 1.1rem;
+  background-color: var(--Soft-red);
+  border-radius: 12px;
+}
+.top_chart .sale_title {
+  color: var(--White);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.top_chart .balance {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 0;
+  justify-content: space-between;
+  width: 100%;
+}
+.top_chart .balance .sale {
+  color: var(--White);
+  font-weight: 700;
+  font-size: 2rem;
+  position: relative;
+  top: 8px;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 500px;
+  padding: 1.8rem 1.5rem;
+  background-color: var(--White);
+  border-radius: 12px;
+}
+.chart .sale_title {
+  color: var(--Dark-brown);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.chart .chart_container {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 15px;
+  margin: 50px 0 20px;
+  justify-content: center;
+  width: 100%;
+}
+.chart .chart_container .chart_container_item_cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.chart .chart_container .chart_container_item_cont .chart_container_item {
+  width: 40px;
+  height: 200px;
+  background-color: var(--Soft-red);
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+.chart .chart_container .chart_container_item_cont .chart_container_item.active {
+  background-color: var(--Cyan);
+}
+.chart .chart_container .chart_container_item_cont .chart_container_item:hover {
+  cursor: pointer;
+  background-color: var(--Cyan);
+}
+.chart .chart_container .chart_container_item_cont .mon {
+  height: 50px;
+}
+.chart .chart_container .chart_container_item_cont .tue {
+  height: 100px;
+}
+.chart .chart_container .chart_container_item_cont .wed {
+  height: 170px;
+}
+.chart .chart_container .chart_container_item_cont .thu {
+  height: 120px;
+}
+.chart .chart_container .chart_container_item_cont .fri {
+  height: 80px;
+}
+.chart .chart_container .chart_container_item_cont .sat {
+  height: 150px;
+}
+.chart .chart_container .chart_container_item_cont .sun {
+  height: 90px;
+}
+.chart .chart_container .chart_container_item_cont .chart_container_item_title {
+  color: var(--Dark-brown);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.chart .chart_container .chart_container_item_cont .salary {
+  background-color: #000;
+  color: var(--White);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  visibility: hidden;
+}
+.chart .chart_container .chart_container_item_cont:hover .salary {
+  visibility: visible;
+}
+.chart .chart_total {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0;
+  width: 100%;
+  margin-top: 15px;
+}
+.chart .chart_total .sale_title {
+  color: var(--Medium-brown);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.chart .chart_total .total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+.chart .chart_total .total .sale {
+  color: var(--Dark-brown);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.chart .chart_total .total .total_percentage {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0;
+}
+.chart .chart_total .total .total_percentage .total_title {
+  color: var(--Medium-brown);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.chart .chart_total .total .total_percentage .precentage {
+  font-weight: 700;
+  color: var(--Dark-brown);
+}
+
+hr {
+  border: 1px solid var(--Cream);
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 0 20px;
+  }
+  .top_chart {
+    width: 100%;
+  }
+  .chart {
+    width: 100%;
+  }
+  .chart .chart_container {
+    gap: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
